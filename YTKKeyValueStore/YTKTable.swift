@@ -148,7 +148,11 @@ public struct YTKTable{
                     var item = YTKItem()
                     item.itemId = objectId
                     item.itemObject = YTKObject(value: v[JSON] as AnyObject )
-                    item.createdTime = v.get(CREATEDTIME)
+//                    item.createdTime = v.get(CREATEDTIME)
+                    do {
+                        item.createdTime = try v.get(CREATEDTIME)
+                    } catch { }
+
                     return item
                 }
             }
@@ -167,7 +171,11 @@ public struct YTKTable{
                     var item = YTKItem()
                     item.itemId = vs[ID]
                     item.itemObject = YTKObject(value:vs[JSON] as AnyObject)
-                    item.createdTime = vs.get(CREATEDTIME)
+//                    item.createdTime = vs.get(CREATEDTIME)
+                    do {
+                        item.createdTime = try vs.get(CREATEDTIME)
+                    } catch { }
+
                     result.append(item)
                 }
             }
