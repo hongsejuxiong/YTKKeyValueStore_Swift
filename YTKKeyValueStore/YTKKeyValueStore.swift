@@ -17,7 +17,7 @@ public class YTKKeyValueStore{
         db = try! Connection(dbPath)
     }
     
-    convenience public init(_ dbName : String! = DEFAULT_DB_NAME , path : String! = PATH_OF_DOCUMENT) throws{
+    convenience public init(_ dbName : String! = "database_swift.sqlite3" , path : String! = PATH_OF_DOCUMENT) throws{
 
         self.init(dbPath:"\(path!)/\(dbName!)")
         
