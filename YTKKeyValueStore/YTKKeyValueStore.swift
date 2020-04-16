@@ -44,7 +44,7 @@ public class YTKKeyValueStore{
                 t.column(CREATEDTIME,defaultValue:Date())
             })
         }catch let error{
-            print("failed to create table : \(tableName)")
+            print("failed to create table : \(String(describing: tableName))")
             throw error
         }
 
@@ -59,7 +59,7 @@ public class YTKKeyValueStore{
         do{
             try db?.run(Table(tableName).drop(ifExists: false))
         }catch let error{
-            print("failed to drop table : \(tableName)")
+            print("failed to drop table : \(String(describing: tableName))")
             throw error
         }
         
