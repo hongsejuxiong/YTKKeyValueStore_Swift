@@ -11,7 +11,7 @@ import SQLite
 
 internal let YTKDEBUG = true
 
-internal let PATH_OF_DOCUMENT : String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+let PATH_OF_DOCUMENT : String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
 internal let DEFAULT_DB_NAME = "database_swift.sqlite3"
 
